@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>3 meses ❤️</title>
+
+    <!-- CSS correcto -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- Música -->
+<audio id="music" src="{{ url_for('static', filename='music.mp3') }}"></audio>
+
+<!-- 1. Pantalla inicial -->
+<section class="screen active">
+    <h1>Felices 3 meses ❤️</h1>
+    <p>Esto es solo para ti...</p>
+    <button onclick="nextScreen()">Haz click</button>
+</section>
+
+<!-- 2. Recuerdos -->
+<section class="screen">
+    <h2>Nuestros momentos</h2>
+
+<div class="carrusel">
+    <img id="foto" src="{{ url_for('static', filename='fotos/foto1.jpg') }}">
+    <p id="texto">Nuestro primer recuerdo ❤️</p>
+    
+    <button onclick="cambiarFoto()">Siguiente foto</button>
+</div>
+
+<!-- ESTE ES EL IMPORTANTE -->
+<button onclick="nextScreen()">Continuar ❤️</button>
+</section>
+
+<!-- 3. Especial -->
+<section class="screen">
+    <h2>Cosas que amo de ti</h2>
+    <ul>
+        <li>Tu sonrisa</li>
+        <li>Cómo me haces sentir</li>
+        <li>Tu forma de ser conmigo</li>
+    </ul>
+    <button onclick="nextScreen()">Siguiente</button>
+</section>
+
+<!-- 4. Final -->
+<section class="screen">
+    <h2>3 meses contigo...</h2>
+    <p>
+        Puede que no sea tanto tiempo,<br>
+        pero contigo todo se siente distinto ❤️<br><br>
+        Y quiero seguir sumando meses contigo 😘😘.
+    </p>
+    <button onclick="nextScreen()">Último</button>
+</section>
+
+<!-- 5. Sorpresa -->
+<section class="screen">
+    <h2>No deberías haber llegado hasta aquí...</h2>
+    <p>Pero si llegaste</p>
+    <p>es porque eres lo mejor que me ha pasado ❤️</p>
+    <p>❤️💙 Te amo mucho 💙❤️</p>
+</section>
+
+<!-- JS correcto -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
